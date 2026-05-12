@@ -1,0 +1,7 @@
+﻿services:
+  rewind.api:
+    image: rewind.api
+    build:
+      context: .
+      dockerfile: ReWind.API/Dockerfile
+

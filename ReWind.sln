@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReWind.API", "ReWind.API\ReWind.API.csproj", "{97EB956B-1419-4319-90A7-4D04F7FCD7AC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{705C6EFD-82C8-4045-A309-8096BDB90FEF}"
+	ProjectSection(SolutionItems) = preProject
+		compose.yaml = compose.yaml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReWind.Application", "ReWind.Application\ReWind.Application.csproj", "{7A67329A-6383-4969-89B0-569091734386}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReWind.Core", "ReWind.Core\ReWind.Core.csproj", "{C348B3F7-189F-4B3C-BD3F-4AF4CCD24A2C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReWind.Infrastructure", "ReWind.Infrastructure\ReWind.Infrastructure.csproj", "{3C5E057F-2B3F-45A2-9AC7-4C5B9D3FA93A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{97EB956B-1419-4319-90A7-4D04F7FCD7AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97EB956B-1419-4319-90A7-4D04F7FCD7AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97EB956B-1419-4319-90A7-4D04F7FCD7AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97EB956B-1419-4319-90A7-4D04F7FCD7AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A67329A-6383-4969-89B0-569091734386}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A67329A-6383-4969-89B0-569091734386}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A67329A-6383-4969-89B0-569091734386}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A67329A-6383-4969-89B0-569091734386}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C348B3F7-189F-4B3C-BD3F-4AF4CCD24A2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C348B3F7-189F-4B3C-BD3F-4AF4CCD24A2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C348B3F7-189F-4B3C-BD3F-4AF4CCD24A2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C348B3F7-189F-4B3C-BD3F-4AF4CCD24A2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C5E057F-2B3F-45A2-9AC7-4C5B9D3FA93A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C5E057F-2B3F-45A2-9AC7-4C5B9D3FA93A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C5E057F-2B3F-45A2-9AC7-4C5B9D3FA93A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C5E057F-2B3F-45A2-9AC7-4C5B9D3FA93A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
