@@ -7,4 +7,7 @@ public class Wastes : BaseEntity
         Description = description;
     }
     public string Description { get; private set; }
+    
+    public virtual List<ParkWastes> Parks { get; set; } = [];
+
 }

@@ -1,11 +1,10 @@
-using ReWind.Application.DTOs;
+using Microsoft.EntityFrameworkCore;
+
 
 namespace ReWind.Infrastructure.Repositories;
 
 public class ParksRepository
 {
-    // public async Task<List<GetAllParksDTO>> GetAllParks()
-    // {
-    //     
-    // }
+    
+    
 }

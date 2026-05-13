@@ -5,7 +5,7 @@ namespace ReWind.Core.Entities;
 public class Parks : BaseEntity
 {
     public string Name { get; set; }
-    public string CNPJ { get; set; }
+    public string? CNPJ { get; set; }
     public string CEG { get; set; }
     public string State { get; set; }
     public string Source { get; set; }
@@ -24,7 +24,6 @@ public class Parks : BaseEntity
     public DateTime? LicenseStartDate { get; set; }
     public DateTime? LicenseEndDate { get; set; }
     public string OwnershipRelation { get; set; }
-    public virtual List<ParkOwners> Owners { get; set; }
     public string? SubBasin { get; set; }
     public string? Municipalities { get; set; }
     public string? Address1 { get; set; }
@@ -34,4 +33,6 @@ public class Parks : BaseEntity
     public decimal? TotalCO2ReductionTons { get; set; }
     public CurtailmentRiskLevelEnum? CurtailmentRiskLevel { get; set; }
     
+    public virtual List<ParksOwnership?> Owners { get; set; } = [];
+    public virtual List<ParkWastes> Wastes { get; set; } = [];
 }

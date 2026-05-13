@@ -13,4 +13,5 @@ public class GetAllParksDTO
     public ParkPhaseEnum ParkPhase { get; set; }
     public decimal? GrantedPowerKw { get; set; }
     public decimal? InspectedPowerKw { get; set; }
+    
 }
