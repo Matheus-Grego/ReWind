@@ -19,10 +19,12 @@ public class ParksRepository : IParksRepository
         return await _dbContext.Parks.AsNoTracking().ToListAsync();
     }
 
-    public async Task<Parks> GetParkById(Guid parkId)
+    public async Task<Parks?> GetParkById(Guid parkId)
     {
         return await _dbContext.Parks.Include(x => x.Wastes)
+            .ThenInclude(x => x.Waste)
             .Include(X => X.Owners)
+            .AsSplitQuery()
             .SingleOrDefaultAsync(x => x.Id == parkId);
     }
 
@@ -30,6 +32,11 @@ public class ParksRepository : IParksRepository
     {
         await _dbContext.Parks.AddAsync(park);
         await _dbContext.SaveChangesAsync();
+    }
+
+    public async Task<List<ParkWastes>> GetParkWastes(Guid parkId)
+    {
+        return await _dbContext.ParkWastes.Where(x => x.ParkId == parkId).ToListAsync();
     }
     
 }

@@ -7,14 +7,14 @@ namespace ReWind.Application.Queries.Parks.GetAllParks;
 
 public class GetAllParksHandler : IRequestHandler<GetAllParksQuery, Result<List<GetAllParksDTO>>>
 {
-    private readonly IParksRepository _parksRepository;
-    public GetAllParksHandler(IParksRepository parksRepository)
+    private readonly IParksRepository _repository;
+    public GetAllParksHandler(IParksRepository repository)
     {
-        _parksRepository = parksRepository;
+        _repository = repository;
     }
     public async Task<Result<List<GetAllParksDTO>>> Handle(GetAllParksQuery request, CancellationToken cancellationToken)
     {
-        var entity = await _parksRepository.GetAllParks();
+        var entity = await _repository.GetAllParks();
         var data = entity.Select(x => GetAllParksDTO.FromEntity(x)).ToList();
         return Result<List<GetAllParksDTO>>.Success(data);
     }

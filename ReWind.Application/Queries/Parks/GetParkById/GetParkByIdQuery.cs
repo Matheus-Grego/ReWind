@@ -6,5 +6,9 @@ namespace ReWind.Application.Queries.Parks.GetParkById;
 
 public class GetParkByIdQuery : IRequest<Result<GetParkByIdDTO>>
 {
-    
+    public GetParkByIdQuery(Guid id)
+    {
+        Id = id;
+    }
+    public Guid Id { get; private set; }
 }

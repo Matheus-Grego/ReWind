@@ -1,3 +1,5 @@
+using ReWind.Core.Enums;
+
 namespace ReWind.Core.Entities;
 
 public class Companies : BaseEntity
@@ -11,7 +13,7 @@ public class Companies : BaseEntity
     public string? Phone { get; set; }
     public string? Email { get; set; }
     public string? Owner { get; set; }
+    public CompanySegmentEnum ComapnySegment { get; set; }
     
-    
-    public virtual List<CompanyOwnership> Owners { get; set; } = [];
+    public virtual List<CompanyOwnership?> Owners { get; set; } = [];
 }
