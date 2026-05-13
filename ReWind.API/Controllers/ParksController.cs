@@ -1,4 +1,6 @@
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using ReWind.Application.Queries.Parks.GetAllParks;
 
 namespace ReWind.API.Controllers;
 
@@ -6,7 +8,20 @@ namespace ReWind.API.Controllers;
 [Route("api/parks")]
 public class ParksController : ControllerBase
 {
-    public async Task<IActionResult> Get()
+    private readonly IMediator _mediator;
+    public ParksController(IMediator mediator)
+    {
+        _mediator = mediator;
+    }
+    [HttpGet]
+    public async Task<IActionResult> GetAll()
+    {
+        var result = await _mediator.Send(new GetAllParksQuery());
+        return Ok(result);
+    }
+    
+    [HttpGet("{id}")]
+    public async Task<IActionResult> GetParkById(Guid id)
     {
         return NoContent();
     }

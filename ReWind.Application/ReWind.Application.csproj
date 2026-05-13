@@ -8,11 +8,14 @@
 
     <ItemGroup>
       <Folder Include="Commands\" />
-      <Folder Include="Queries\Parks\GetAllParks\" />
     </ItemGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\ReWind.Core\ReWind.Core.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="MediatR" Version="14.1.0" />
     </ItemGroup>
 
 </Project>

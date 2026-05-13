@@ -10,6 +10,7 @@ public class Companies : BaseEntity
     public string Address { get; set; }
     public string? Phone { get; set; }
     public string? Email { get; set; }
+    public string? Owner { get; set; }
     
     
     public virtual List<CompanyOwnership> Owners { get; set; } = [];

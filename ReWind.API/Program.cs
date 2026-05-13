@@ -1,5 +1,8 @@
 using Microsoft.EntityFrameworkCore;
+using ReWind.Application.Queries.Parks.GetAllParks;
+using ReWind.Core.IRepositories;
 using ReWind.Infrastructure.Persistance;
+using ReWind.Infrastructure.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,12 +17,22 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 builder.Services.AddDbContext<ReWindDBContext>(options =>
     options.UseNpgsql(connectionString));
 
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+builder.Services.AddScoped<IParksRepository, ParksRepository>();
+
+builder.Services.AddMediatR(config => config.RegisterServicesFromAssemblyContaining<GetAllParksQuery>());
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
 
 app.UseHttpsRedirection();
