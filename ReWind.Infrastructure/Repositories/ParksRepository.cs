@@ -33,10 +33,5 @@ public class ParksRepository : IParksRepository
         await _dbContext.Parks.AddAsync(park);
         await _dbContext.SaveChangesAsync();
     }
-
-    public async Task<List<ParkWastes>> GetParkWastes(Guid parkId)
-    {
-        return await _dbContext.ParkWastes.Where(x => x.ParkId == parkId).ToListAsync();
-    }
     
 }

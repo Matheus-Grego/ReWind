@@ -66,9 +66,9 @@ public class GetParkByIdDTO
         Email = park.Email,
         TotalCO2ReductionTons = park.TotalCO2ReductionTons,
         CurtailmentRiskLevel = park.CurtailmentRiskLevel?.ToString(),
-        Owners = park.Owners?
-            .Select(o => o != null ? ParksOwnershipDTO.FromEntity(o) : null)
-            .ToList() ?? [],
+        // Owners = park.Owners?
+        //     .Select(o => o != null ? ParksOwnershipDTO.FromEntity(o) : null)
+        //     .ToList() ?? [],
         Wastes = park.Wastes?
             .Select(ParkWastesDTO.FromEntity)
             .ToList() ?? [],
