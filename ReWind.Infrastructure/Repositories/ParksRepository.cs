@@ -28,7 +28,7 @@ public class ParksRepository : IParksRepository
             .SingleOrDefaultAsync(x => x.Id == parkId);
     }
 
-    public async Task RegisterPark(Parks park)
+    public async Task InsertPark(Parks park)
     {
         await _dbContext.Parks.AddAsync(park);
         await _dbContext.SaveChangesAsync();

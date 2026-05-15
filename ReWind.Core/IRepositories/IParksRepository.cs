@@ -6,4 +6,5 @@ public interface IParksRepository
 {
     Task<List<Parks>> GetAllParks();
     Task<Parks?> GetParkById(Guid parkId);
+    Task InsertPark(Parks park);
 }
