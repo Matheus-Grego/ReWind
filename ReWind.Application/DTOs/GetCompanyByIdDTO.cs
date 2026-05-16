@@ -2,9 +2,8 @@ using ReWind.Core.Entities;
 
 namespace ReWind.Application.DTOs;
 
-public class GetAllCompaniesDTO
+public class GetCompanyByIdDTO
 {
-    public Guid Id { get; set; }
     public string? CompanyGroup { get; set; } 
     public string? LegalName { get; set; } 
     public string? TradeName { get; set; } 
@@ -18,9 +17,8 @@ public class GetAllCompaniesDTO
     public string CompanySegment { get; set; }
     public string? CompanyPlantType { get; set; }
 
-    public static GetAllCompaniesDTO FromEntity(Companies entity) => new()
+    public static GetCompanyByIdDTO FromEntity(Companies entity) => new()
     {
-        Id = entity.Id,
         CompanyGroup = entity.CompanyGroup,
         LegalName =  entity.LegalName,
         TradeName = entity.TradeName,

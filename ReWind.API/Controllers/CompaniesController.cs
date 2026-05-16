@@ -2,6 +2,7 @@ using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using ReWind.Application.DTOs;
 using ReWind.Application.Queries.Companies.GetAllCompanies;
+using ReWind.Application.Queries.Companies.GetCompanyById;
 using ReWind.Application.Queries.Parks.GetAllParks;
 using ReWind.Application.Queries.Parks.GetParkById;
 
@@ -24,9 +25,9 @@ public class CompaniesController : ControllerBase
     }
     
     [HttpGet("{id}")]
-    public async Task<IActionResult> GetParkById(Guid id)
+    public async Task<IActionResult> GetCompanyById(Guid id)
     {
-        var result = await _mediator.Send(new GetParkByIdQuery(id));
+        var result = await _mediator.Send(new GetCompanyByIdQuery(id));
         return Ok(result);    
     }
    

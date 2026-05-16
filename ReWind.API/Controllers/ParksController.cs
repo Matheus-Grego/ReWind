@@ -1,5 +1,6 @@
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using ReWind.Application.Commands.Parks.InsertPark;
 using ReWind.Application.Queries.Parks.GetAllParks;
 using ReWind.Application.Queries.Parks.GetParkById;
 
@@ -25,6 +26,12 @@ public class ParksController : ControllerBase
     public async Task<IActionResult> GetParkById(Guid id)
     {
         var result = await _mediator.Send(new GetParkByIdQuery(id));
+        return Ok(result);    
+    }
+    [HttpPost]
+    public async Task<IActionResult> InsertPark(InsertParkCommand command)
+    {
+        var result = await _mediator.Send(command);
         return Ok(result);    
     }
    
