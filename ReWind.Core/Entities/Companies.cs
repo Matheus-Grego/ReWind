@@ -14,7 +14,10 @@ public class Companies : BaseEntity
     public string? Phone { get; set; }
     public string? Email { get; set; }
     public string? Owner { get; set; }
-    public CompanySegmentEnum ComapnySegment { get; set; }
+    public double? Latitude { get; set; }
+    public double? Longitude { get; set; }
+    public CompanySegmentEnum CompanySegment { get; set; }
+    public CompanyPlantTypeEnum? CompanyPlantType { get; set; }
     
     public virtual List<CompanyOwnership?> Owners { get; set; } = [];
 }

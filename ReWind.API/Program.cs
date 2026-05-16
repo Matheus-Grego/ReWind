@@ -23,6 +23,8 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IParksRepository, ParksRepository>();
 builder.Services.AddScoped<IWastesRepository, WastesRepository>();
 builder.Services.AddScoped<IParkWastesRepository, ParkWastesRepository>();
+builder.Services.AddScoped<ICompaniesRepository, CompaniesRepository>();
+
 
 
 builder.Services.AddMediatR(config => config.RegisterServicesFromAssemblyContaining<GetAllParksQuery>());

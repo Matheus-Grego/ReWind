@@ -35,6 +35,4 @@ public class ParkWastesController : ControllerBase
         var result = await _mediator.Send(command);
         return NoContent();
     }
-    
-    
 }
