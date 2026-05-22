@@ -160,6 +160,7 @@ O ReWind busca conectar:
 - Indústrias de reciclagem
 - Iniciativas ambientais
 - Projetos de economia circular
+- Politicos
 
 Tudo isso reduzindo impactos ambientais e criando novas oportunidades econômicas a partir do descomissionamento de turbinas eólicas.
 
